@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import { useChampions } from './Hooks/useChampions';
 import './App.css'
 import { ChampionImages, Champion } from './Types/Champion';
+import Home from './Pages/Home';
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
         </a>
       </div>
       <h1 className="">Vite + React</h1>
+      <Home/>
       <div className="card">
         <select value={selectValue} onChange={handleSelectChange}>
           {champions && Object.keys(champions).map((champ) => {
