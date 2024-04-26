@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import { useChampions } from './Hooks/useChampions';
 import './App.css'
 import { ChampionImages, Champion } from './Types/Champion';
-import Home from './Pages/Home';
+import Card from './Components/Card/Card';
 
 function App() {
 
@@ -50,6 +50,7 @@ function App() {
 
   return (
     <>
+   
       <div >
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -59,8 +60,17 @@ function App() {
         </a>
       </div>
       <h1 className="">Vite + React</h1>
-      <Home/>
+      
+      <div className="flex flex-wrap gap-3 p-3">
+        {champions && Object.entries(champions).map(champion=>{
+          return <Card key={champion[0]} title={champion[0]} description={champion[1].title} imgSrc={getChampionImgsURL(champion[1].id, 0).loading}/>
+        })}
+        </div>
+
+
       <div className="card">
+        
+      
         <select value={selectValue} onChange={handleSelectChange}>
           {champions && Object.keys(champions).map((champ) => {
             return <option key={champ} value={champ}>{champ}</option>

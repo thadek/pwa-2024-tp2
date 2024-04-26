@@ -17,11 +17,11 @@ const Card: React.FC<TypeCharacter> = ({
         src={imgSrc}
         className=" transition-transform group-hover:scale-110 duration-200"
       />
-      <div className="absolute inset-0 flex items-end bg-gradient-to-t  from-black/60 to-transparent">
-        <div className=" text-white p-3">
+      <div className="absolute inset-0 flex items-end ">
+        <div className=" text-white p-3  w-full bg-black bg-opacity-60	">
           <h3 className="text-xl  font-bold mb-1">{title}</h3>
          <p className="font-light text-sm">{description}</p>
-         <div className="flex flex-row-reverse p-2"> <Btncard/></div>
+         <div className="flex flex-row-reverse "> <Btncard/></div>
         </div>
       </div>
     </div>
