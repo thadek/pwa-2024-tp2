@@ -29,7 +29,7 @@ export const useChampions = () => {
       }
       const data = await res.json()
 
-      parseSpecialChampions(data.data);
+      
       return data.data
     } catch (err: any) {
       return { error: err.message }

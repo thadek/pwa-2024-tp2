@@ -61,11 +61,14 @@ function App() {
       </div>
       <h1 className="">Vite + React</h1>
       
-      <div className="flex flex-wrap gap-3 p-3">
+      <div className="flex items-center justify-center">
+      <div className="flex container  items-center justify-center flex-wrap gap-3 p-3">
         {champions && Object.entries(champions).map(champion=>{
           return <Card key={champion[0]} title={champion[0]} description={champion[1].title} imgSrc={getChampionImgsURL(champion[1].id, 0).loading}/>
         })}
         </div>
+      </div>
+      
 
 
       <div className="card">
