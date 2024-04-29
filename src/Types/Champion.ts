@@ -39,6 +39,21 @@ export type Champion = {
     enemytips: string[];
     tags: string[];
     partype: string;
+    spells:[];
+    error?: string;
+    passive:{
+        name: string;
+        description: string;
+        image: {
+            full: string;
+            sprite: string;
+            group: string;
+            x: number;
+            y: number;
+            w: number;
+            h: number;
+        }
+    }
     stats: {
         hp: number;
         hpperlevel: number;

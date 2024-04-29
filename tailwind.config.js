@@ -2,7 +2,11 @@
 export default {
   content: ["./src/**/*.{html,js,tsx,ts,jsx}"],
   theme: {
+    
     extend: {
+      fontFamily:{
+        'sans': ['Inter', 'sans-serif'],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

@@ -1,16 +1,13 @@
+import App from "../App";
 import Card from "../Components/Card/Card";
+import { useTitle } from "../Hooks/useTitle";
 
 export default function Home() {
+
+  useTitle("Home");
+
+
   return (
-    <div>
-      <Card
-        imgSrc="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Aatrox_0.jpg"
-        title="Aatrox"
-        description="Aatrox desata su forma demoníaca,
-       teme a los súbditos enemigos cercanos y obtiene daño de ataque,
-        mayor curación y velocidad de movimiento. Si consigue un derribo,
-         este efecto se extiende."
-      />
-    </div>
+    <App/>
   );
 }
