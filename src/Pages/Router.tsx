@@ -11,7 +11,7 @@ export const router = createBrowserRouter([
         element: <Home />,
     },
     {
-        path: ROUTES.detail,
+        path: ROUTES.detail + ":id", //Ruta dinamica
         element: <ChampionDetail/>,
     },
     {

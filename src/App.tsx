@@ -1,6 +1,6 @@
 //import { useState, useEffect } from 'react'
 import './App.css'
-import Listcards from './components/Listcards/Listcards'
+import Listcards from './Components/Listcards/Listcards'
 
 function App() {
 

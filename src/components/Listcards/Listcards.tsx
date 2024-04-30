@@ -28,9 +28,8 @@ const  Listcards=() => {
         <div className="flex flex-wrap justify-center gap-4 p-">
         {champions && Object.entries(champions).map(champion =>{
           return <Card key={champion[0]} 
-          imgSrc={getChampionImgsURL(champion[1].id, 0).loading}
-          title={champion[1].id} 
-          description={champion[1].title}/>
+          champ = {champion[1]}
+          />
         })}
         </div>
      
