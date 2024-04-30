@@ -1,34 +1,41 @@
-//import { TypeCharacter} from "../../interface/character.interface";
-//import { useEffect, useState } from "react";
-//import Card from "../Card/Card";
-//import { useChampions } from './Hooks/useChampions';
-//import {  Champion } from './Types/Champion';
+import { useState, useEffect } from 'react'
+import { useChampions } from '../../Hooks/useChampions';
+import { Champion } from '../../Types/Champion';
+import Card from '../Card/Card';
 
+const  Listcards=() => {
 
-const Listcards: React.FC<{}> =() => {
+  const { getChampions, getChampionImgsURL } = useChampions();
 
-/*
-    const { getChampions} = useChampions();
-    const [champions, setChampions] = useState<Champion[]>();
+  const [champions, setChampions] = useState<Champion[]>();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  useEffect(() => {
+    const getC = async () => {
+      const champions = await getChampions();
+      setChampions(champions);
+      setIsLoading(false);
+    }
+    getC();
+  }, [])
 
-*/
-   return(
-    <h1>aqui iria la lista de card</h1>
-    /*
-    <div>
-    
+  
+  if(isLoading) return <h1>Cargando...</h1>;
 
-          
-         <Card 
-            imgSrc={champ.image}
-        title={champ.name}
-        description={champ.blurb}/>
-        
-       </div>
-    
-    */
-   );
+  return (
+    <>
 
+        <div className="flex flex-wrap justify-center gap-4 p-">
+        {champions && Object.entries(champions).map(champion =>{
+          return <Card key={champion[0]} 
+          imgSrc={getChampionImgsURL(champion[1].id, 0).loading}
+          title={champion[1].id} 
+          description={champion[1].title}/>
+        })}
+        </div>
+     
+    </>
+  )
 }
-export default Listcards;
+
+export default Listcards

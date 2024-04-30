@@ -2,21 +2,17 @@ import { useChampions } from "../Hooks/useChampions";
 import { useParams } from "react-router-dom";
 import { Champion } from "../Types/Champion";
 import { useState,useEffect } from "react";
-import { ChampionCover, ChampionDetail, ImageSlide } from "../Components/Champion";
-
-
-
-const { getChampion } = useChampions();
-
+import { ChampionCover, ChampionDetail, ImageSlide } from "../components/Champion";
 
 
 export default function ChampionDetails() {
 
+    const { getChampion } = useChampions();
+
     const { id } = useParams<{ id: string }>();
 
     
-    const [champ, setChamp] = useState<Champion>(null); 
-    
+    const [champ, setChamp] = useState<Champion>(); 
    
     useEffect(() => {
         const getChamp = async () => {

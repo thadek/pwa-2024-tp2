@@ -1,3 +1,4 @@
+import { ROUTES} from "./../const/routes"
 import {
     createBrowserRouter,
 } from "react-router-dom";
@@ -6,12 +7,12 @@ import { Home, ChampionDetail } from "./";
 
 export const router = createBrowserRouter([
     {
-        path: "/",
+        path: ROUTES.home,
         element: <Home />,
     },
     {
-        path: "/champion/:id",
-        element: <ChampionDetail />,
+        path: ROUTES.detail,
+        element: <ChampionDetail/>,
     },
     {
         path:"*",
