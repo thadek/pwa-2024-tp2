@@ -1,6 +1,9 @@
-const Btncard = () => {
+
+import { ButtonClickHandler  } from "../../Types/ButtonClickHandler";
+
+const Btncard= ({onClick }: { onClick: ButtonClickHandler }) => {
 return (
-    <button
+    <button onClick={onClick} 
     className="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200"
     type="button"
   >

@@ -5,17 +5,14 @@ import { useState,useEffect } from "react";
 import { ChampionCover, ChampionDetail, ImageSlide } from "../components/Champion";
 
 
-
-const { getChampion } = useChampions();
-
-
-
 export default function ChampionDetails() {
+
+    const { getChampion } = useChampions();
 
     const { id } = useParams<{ id: string }>();
 
     
-    const [champ, setChamp] = useState<Champion>(null); 
+    const [champ, setChamp] = useState<Champion>(); 
    
     useEffect(() => {
         const getChamp = async () => {

@@ -1,5 +1,7 @@
 import Btncard from "../Btncard/Btncard";
 import { TypeCharacter} from "../../interface/character.interface";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../const/routes";
 
 
 const Card: React.FC<TypeCharacter> = ({
@@ -7,7 +9,14 @@ const Card: React.FC<TypeCharacter> = ({
   title,
   description,
   ...props
+  
 }) => {
+  const navigate = useNavigate()
+
+  const onclickSeeMoreHandler= () =>{
+    navigate(ROUTES.detail);
+  }
+
   return (
     <div>
       <fieldset className="relative text-center gap-6 items-center rounded-2xl mb-14 border  border-white ">
@@ -24,7 +33,7 @@ const Card: React.FC<TypeCharacter> = ({
         <div className=" text-white p-3 group w-full bg-black bg-opacity-60	">
           <h3 className="text-xl lolfont uppercase group-hover:translate-x-3 duration-200 font-bold mb-1">{title}</h3>
          <p className="font-light text-sm">{description}</p>
-         <div className="flex flex-row-reverse "> <Btncard/></div>
+         <div className="flex flex-row-reverse "> <Btncard onClick={onclickSeeMoreHandler}/></div>
         </div>
       </div>
     </div>
