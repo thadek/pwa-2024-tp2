@@ -4,10 +4,23 @@ import { motion } from 'framer-motion';
 import ChampionDetailContainer from './ChampionDetailContainer';
 
 
-export default function ChampionDetail({ name = "Yasuo", champ }: { name?: string, champ: Champion }) {
 
-    const background = `linear-gradient(90deg, rgb(0 0 0) 0%, rgba(20, 20, 20, 0) 100%) 50% center / cover,url('https://ddragon.leagueoflegends.com/cdn/img/champion/centered/${name}_0.jpg')`;
+
+
+export default function ChampionDetail({ name = "Teemo", champ, randomSkin }: { name?: string, champ: Champion, randomSkin: string }) {
+
+
+
+
+
+    const background = `https://ddragon.leagueoflegends.com/cdn/img/champion/centered/${name}_${randomSkin}.jpg`;
+
+
+
+
+
     return (
+        
         <>
             <motion.div
                 initial={{ opacity: 0 }}
@@ -21,8 +34,10 @@ export default function ChampionDetail({ name = "Yasuo", champ }: { name?: strin
                         {/**Champion Detail Container */}
                         <ChampionDetailContainer champ={champ} />
                         {/**Background*/}
-                        <div className="hidden  md:w-1/2 md:block " style={{ background, width: '50%', height: '100%', backgroundSize: 'cover', backgroundPosition: '25%' }}/>
-             
+                        <div className=" hidden lg:w-1/2  z-[1] md:block  bg-gradient-to-r from-black " >
+                            <img src={background} className="w-1/2 h-full absolute md:object-cover xl:object-center-right xl:object-fit xl:object-center-left mix-blend-overlay" />
+                        </div>
+
                     </div>
 
                 </div>

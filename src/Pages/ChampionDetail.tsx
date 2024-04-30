@@ -16,12 +16,14 @@ export default function ChampionDetails() {
 
     
     const [champ, setChamp] = useState<Champion>(null); 
+    
    
     useEffect(() => {
         const getChamp = async () => {
             //Traer un campeon
                 const champ = await getChampion(id);
-                setChamp(champ);     
+                setChamp(champ);  
+
         }
         getChamp();
         
@@ -33,10 +35,10 @@ export default function ChampionDetails() {
     if(champ.error) return <h1>Campeon no encontrado</h1>;
     
 
-return champ && !champ.error && 
+return champ && !champ.error &&
       <div>
         <ChampionCover champion={champ} />
-         <ChampionDetail name={id} champ={champ} />
+         <ChampionDetail name={id} randomSkin={champ.randomSkin} champ={champ} />
          <ImageSlide imgs={champ.skins} id={id} />
         </div> 
       

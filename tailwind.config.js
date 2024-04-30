@@ -18,8 +18,11 @@ export default {
             transform: 'translateX(100%)',
           },
         },
-        
+      
       },
+      objectPosition:{
+        'center-left': '30% 50%',
+      }
     },
   },
   plugins: [],

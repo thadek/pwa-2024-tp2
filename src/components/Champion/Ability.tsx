@@ -47,7 +47,7 @@ export const Ability = ({ spell, passive,champ,currentPage }: { spell?: any, pas
             <h2 className="lolfont text-2xl uppercase">{ability[currentPage]}</h2>
             <h3 className="lolfont uppercase">{spell.name}</h3>
             <p className=" text-sm pb-5" dangerouslySetInnerHTML={posiblehtml}></p>
-            <video preload="metadata" autoPlay muted loop src={`https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${completeZeros(parseInt(champ.key))}/ability_${completeZeros(parseInt(champ.key))}_${ability[currentPage]}1.webm`} className="w-1/2" />
+            <video preload="metadata" autoPlay muted loop src={`https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${completeZeros(parseInt(champ.key))}/ability_${completeZeros(parseInt(champ.key))}_${ability[currentPage]}1.webm`} className="w-full md:w-1/2" />
 
         </motion.div>
     );

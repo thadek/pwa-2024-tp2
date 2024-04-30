@@ -54,6 +54,7 @@ export type Champion = {
             h: number;
         }
     }
+    randomSkin:string;
     stats: {
         hp: number;
         hpperlevel: number;

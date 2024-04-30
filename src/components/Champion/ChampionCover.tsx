@@ -16,7 +16,7 @@ export default function ChampionCover({ champion }: any) {
         <motion.div initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}>
-            <div className='flex min-h-screen   justify-center text-white items-end sm:bg-[position:30% 20%] md:bg-[size:120%]  bg-cover   bg-no-repeat  ' style={{ backgroundImage: background, backgroundPosition: '0% 50%' }}>
+            <div className='flex min-h-screen  bg-cover bg-center md:bg-[size:200%]   lg:bg-[size:160%]  xl:bg-[size:120%]   2xl:bg-[size:100%] justify-center text-white items-end      bg-no-repeat  ' style={{ backgroundImage: background }}>
 
 
                 <div className="container" >

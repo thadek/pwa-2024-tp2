@@ -11,6 +11,7 @@ export const useChampions = () => {
       }
       const data = await res.json()
       
+      data.data[champion].randomSkin = getRandomChampSkin(data.data[champion].skins)
     
       return data.data[champion]
     } catch (err: any) {
@@ -39,6 +40,14 @@ export const useChampions = () => {
 
 
 
+const getRandomChampSkin = (skins: any) => {
+
+  const random = Math.floor(Math.random() * skins.length);
+  return skins[random].num;
+
+}
+
+
    function getChampionImgsURL(champion: string, skin = 0) {
     return {
       skin: `${riotBasicURL}/img/champion/splash/${champion}_${skin}.jpg`,
@@ -55,7 +64,7 @@ export const useChampions = () => {
   
 
   return {
-    getChampion, getChampions, getChampionImgsURL,getSpellImgURL
+    getChampion, getChampions, getChampionImgsURL,getSpellImgURL,getRandomChampSkin
   }
 
 }    
