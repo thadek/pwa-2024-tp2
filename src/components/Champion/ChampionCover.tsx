@@ -1,4 +1,4 @@
-import { easeIn, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import ChampionLore from './ChampionLore';
 import { useTitle } from '../../Hooks/useTitle';
 import { Reveal } from '../Animations/Reveal';

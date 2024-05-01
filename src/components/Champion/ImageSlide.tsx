@@ -27,10 +27,7 @@ const variants = {
     }
 };
 
-const swipeConfidenceThreshold = 1000;
-const swipePower = (offset: number, velocity: number) => {
-    return Math.abs(offset) * velocity;
-};
+
 
 
 
@@ -56,6 +53,7 @@ export default function ImageSlide({ imgs, id }: any) {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1 }}
+                    key="text"
 
                     className="w-2/5 h-full text-center justify-center lolfont uppercase text-white ">
                     <div className="flex flex-col justify-center h-full items-center ">
@@ -104,14 +102,7 @@ export default function ImageSlide({ imgs, id }: any) {
                         
                         dragConstraints={{ left: 0, right: 0 }}
 
-                        onDragEnd={(e, { offset, velocity }) => {
-                            const swipe = swipePower(offset.x, velocity.x);
-                            if (swipe < -swipeConfidenceThreshold) {
-                                paginate(1);
-                            } else if (swipe > swipeConfidenceThreshold) {
-                                paginate(-1);
-                            }
-                        }}
+                      
                     />
 
                 </div>

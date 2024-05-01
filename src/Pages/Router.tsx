@@ -4,6 +4,7 @@ import {
 } from "react-router-dom";
 
 import { Home, ChampionDetail } from "./";
+import { NotFoundPage } from "./Error/404";
 
 export const router = createBrowserRouter([
     {
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
     },
     {
         path:"*",
-        element: <h1>404 Not Found</h1>
-    }
+        element: <NotFoundPage/>
+    },
+    
 ]);

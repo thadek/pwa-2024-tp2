@@ -1,5 +1,5 @@
-import Home from "./Home";
-import ChampionDetail from "./ChampionDetail";
+import Home from "./Home/Home";
+import ChampionDetail from "./Details/ChampionDetail";
 
 export {
     Home,
