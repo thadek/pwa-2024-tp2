@@ -5,7 +5,7 @@ import Card from '../Card/Card';
 
 const  Listcards=() => {
 
-  const { getChampions, getChampionImgsURL } = useChampions();
+  const { getChampions} = useChampions();
 
   const [champions, setChampions] = useState<Champion[]>();
   const [isLoading, setIsLoading] = useState<boolean>(false);

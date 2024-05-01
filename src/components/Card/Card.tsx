@@ -1,5 +1,4 @@
 import Btncard from "../Btncard/Btncard";
-import { TypeCharacter } from "../../interface/character.interface";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../const/routes";
 import { Champion } from "../../Types/Champion";
