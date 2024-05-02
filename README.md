@@ -37,8 +37,10 @@ Luego, procesamos estos datos y los utilizamos para renderizar los elementos en 
 ## Instalación
 1) Clonar el repo y ejecutar ```npm install```
 2) Crear un archivo .env  con variables de entorno por fuera de src y copiar la siguiente linea de codigo:
+   
      VITE_RIOT_URL_DDRAGON_VER = https://ddragon.leagueoflegends.com/cdn/14.8.1
      VITE_RIOT_URL_DDRAGON = https://ddragon.leagueoflegends.com/cdn
+   
    ![creacion archivo  env](https://github.com/thadek/pwa-2024-tp2/assets/86857679/9783ee36-fe93-4c07-b119-e7161674acbc)
 
 4) Ejecutar ```npm run dev``` para visualizar la aplicación en version de desarrollo.
