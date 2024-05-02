@@ -1,5 +1,5 @@
 import { useTitle } from "../../Hooks/useTitle";
-import Listcards from "../../Components/Listcards/Listcards";
+import Listcards from "../../components/Listcards/Listcards";
 
 export default function Home() {
 
