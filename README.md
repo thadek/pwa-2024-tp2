@@ -8,8 +8,8 @@
 - Padilla, Francisco
 - Paredes, Paulina
 
-## Objectivo del proyecto
-Desarrollar una aplicación web que muestre una lista de elementos en forma de cards o
+## Objetivo del proyecto
+Desarrollar una aplicación web que muestre una lista de elementos en forma de cards/
 tarjetas en la página de inicio y permita al usuario ver detalles adicionales al hacer click
 en un elemento, utilizando React, llamadas fetch a archivos locales y Tailwind para
 estilos.
@@ -18,18 +18,20 @@ Es una aplicación web que muestra un lista de cards de todos los campeones LoL
  con su imagen correspondiente, el nombre y una breve descripción + un botón que redirige
 una página de detalles donde se muestran las particularidades de cada campeón y la opción para descargar en un pdf toda la información.
 
-## ‼️ Informacion relevante
+## ‼️ Información relevante
 ### Utilización de una API para obtener datos
-Nuestra aplicación se conecta a una API externa para obtener los datos necesarios para funcionar. En nuestro caso, 
-la API nos proporciona información actualizada sobre los campeones LoL - League of Legends
+Nuestra aplicación se conecta a la API de Riot Games para obtener información actualizada de los campeones en vez de realizar llamadas a un archivo json mockeado. 
+Pueden encontrar más información en esta URL: https://developer.riotgames.com/docs/lol#data-dragon
 
-Para acceder a la API, utilizamos el método  fetch(“Dirección de url”)
+Para obtener los JSON de la misma, creamos el hook useChampions dentro de la carpeta hooks, donde se realizan las llamadas usando la API fetch que provee JS de forma nativa.
 Esto nos permite obtener los datos de forma segura y eficiente. La aplicación no almacena los datos de la API de forma permanente,
- sino que los recupera cada vez que se necesitan.
+sino que los recupera cada vez que se necesitan.
 
 Utilizamos la API  para obtener la lista de elementos que se muestran en la página de inicio y en la página de detalles. 
 La API nos proporciona una lista de objetos JSON que contienen información sobre cada campeón . 
 Luego, procesamos estos datos y los utilizamos para renderizar los elementos en la página.
+
+
 
 ## 🖥️ Previsualización
 
@@ -48,4 +50,4 @@ Luego, procesamos estos datos y los utilizamos para renderizar los elementos en 
 
 
 ## 🚀 Tecnologías
-HTML, CSS, TypeScript, React, viteJs, Tailwind,  JavaScript.
+HTML, CSS, TypeScript, React, React-Router, framer-motion, viteJs, Tailwind,  JavaScript.
