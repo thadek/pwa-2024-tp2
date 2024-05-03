@@ -2,13 +2,15 @@ import { useState, useEffect } from 'react'
 import { useChampions } from '../../Hooks/useChampions';
 import { Champion } from '../../Types/Champion';
 import Card from '../Card/Card';
+import { Loading } from '../../Pages/Loading/Loading';
+
 
 const  Listcards=() => {
 
   const { getChampions} = useChampions();
 
   const [champions, setChampions] = useState<Champion[]>();
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const getC = async () => {
@@ -19,8 +21,7 @@ const  Listcards=() => {
     getC();
   }, [])
 
-  
-  if(isLoading) return <h1>Cargando...</h1>;
+  if(isLoading) return <Loading text='Se estan cargando los campeones..'/>;
 
   return (
     <>
@@ -30,6 +31,7 @@ const  Listcards=() => {
           return <Card key={champion[0]} 
           champ = {champion[1]}
           />
+        
         })}
         </div>
      

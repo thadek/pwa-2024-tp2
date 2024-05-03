@@ -1,7 +1,9 @@
 export const ROUTES = {
 
-        home: "/",
+        landing: "/",
+        home: "/home",
       detail: "/champion/",
+      
      
        
 }

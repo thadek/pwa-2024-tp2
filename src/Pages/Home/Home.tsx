@@ -1,5 +1,6 @@
 import { useTitle } from "../../Hooks/useTitle";
 import Listcards from "../../Components/Listcards/Listcards";
+import Logo from "../../Components/Logo/Logo";
 
 export default function Home() {
 
@@ -8,7 +9,8 @@ export default function Home() {
   return (
     <div className="flex flex-wrap gap-3 p-3">  
     <div>
-      <h1 className='text-xl  text-white  lolfont uppercase'>league of legends</h1>
+    
+      <Logo/>
     </div> 
      <Listcards/>
       </div>

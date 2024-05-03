@@ -41,6 +41,7 @@ export default function ChampionDetails() {
 
     return champ && !champ.error &&
         <div>
+            
             <ChampionCover champion={champ} />
             <ChampionDetail name={id} randomSkin={champ.randomSkin} champ={champ} />
             <ImageSlide imgs={champ.skins} id={id} />

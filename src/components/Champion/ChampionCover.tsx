@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import ChampionLore from './ChampionLore';
 import { useTitle } from '../../Hooks/useTitle';
 import { Reveal } from '../Animations/Reveal';
+import { Show } from '../Animations/Show';
 
 export default function ChampionCover({ champion }: any) {
 
@@ -13,9 +14,7 @@ export default function ChampionCover({ champion }: any) {
 
 
     return (
-        <motion.div initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}>
+        <Show>
             <div className='flex min-h-screen  bg-cover bg-center md:bg-[size:200%]   lg:bg-[size:160%]  xl:bg-[size:120%]   2xl:bg-[size:100%] justify-center text-white items-end      bg-no-repeat  ' style={{ backgroundImage: background }}>
 
 
@@ -42,7 +41,7 @@ export default function ChampionCover({ champion }: any) {
                 </div>
 
             </div>
-        </motion.div>
+        </Show>
 
     );
 }

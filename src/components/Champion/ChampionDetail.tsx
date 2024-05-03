@@ -2,6 +2,7 @@
 import { Champion } from '../../Types/Champion'
 import { motion } from 'framer-motion';
 import ChampionDetailContainer from './ChampionDetailContainer';
+import { Show } from '../Animations/Show';
 
 
 
@@ -22,11 +23,7 @@ export default function ChampionDetail({ name = "Teemo", champ, randomSkin }: { 
     return (
         
         <>
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-            >
+           <Show>
                 <div className='flex min-h-screen text-white  ' >
 
                     <div className="flex w-full ">
@@ -43,7 +40,7 @@ export default function ChampionDetail({ name = "Teemo", champ, randomSkin }: { 
                 </div>
 
 
-            </motion.div>
+                </Show>
 
         </>
     );

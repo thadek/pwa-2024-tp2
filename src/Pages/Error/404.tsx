@@ -1,13 +1,29 @@
-export const NotFoundPage = () => {
-    return (
-        <div className="w-screen h-screen flex justify-center  text-center flex-col">
+import { useTitle } from "../../Hooks/useTitle";
 
-            <div className="h-50 items-center">
-                <h1 className="text-6xl text-red-500 ">404</h1>
-                <h1 className="text-white ">No se ha encontrado el recurso solicitado.</h1>
+export const NotFoundPage = () => {
+
+    useTitle('404 - Not Found');
+    return (
+        <div className="w-screen h-screen flex   items-center justify-center text-center flex-col ">
+
+            <div className="h-50 items-center flex ">
+                <h1 className="text-5xl text-red-500 uppercase  lolfont ">404 </h1>
+                <img src="/img/HeH_Emote.webp" alt="404" className="w-40 h-40" />
+
             </div>
 
 
+            
+               
+               
+         
+
+
+
+
+            <h1 className="text-white ">El recurso solicitado no existe. </h1>
+
+            
         </div>
 
     )
