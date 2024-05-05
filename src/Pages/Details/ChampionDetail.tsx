@@ -2,9 +2,9 @@ import { useChampions } from "../../Hooks/useChampions";
 import { useParams } from "react-router-dom";
 import { Champion } from "../../Types/Champion";
 import { useState, useEffect } from "react";
-import { ChampionCover, ChampionDetail, ImageSlide } from "../../Components/Champion";
-import {  FloatingButtonPDF } from "../../Components/Button/FloatingButtonPDF";
-import { ViewPDF } from "../../Components/PDFService/ViewPDF";
+import { ChampionCover, ChampionDetail, ImageSlide } from "../../components/Champion";
+import {  FloatingButtonPDF } from "../../components/Button/FloatingButtonPDF";
+import { ViewPDF } from "../../components/PDFService/ViewPDF";
 import { NotFoundPage } from "../Error/404";
 import { Loading } from "../Loading/Loading";
 

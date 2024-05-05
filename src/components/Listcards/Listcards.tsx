@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { SearchContext } from '../../context/context';
 import { useState, useEffect } from 'react'
 import { useChampions } from '../../Hooks/useChampions';
 import { Champion } from '../../Types/Champion';
@@ -6,6 +8,8 @@ import { Loading } from '../../Pages/Loading/Loading';
 
 
 const  Listcards=() => {
+
+  const { searchValue, roleValue } = useContext(SearchContext);
 
   const { getChampions} = useChampions();
 
@@ -25,18 +29,19 @@ const  Listcards=() => {
 
   return (
     <>
-
-        <div className="flex flex-wrap justify-center gap-4 p-">
-        {champions && Object.entries(champions).map(champion =>{
-          return <Card key={champion[0]} 
-          champ = {champion[1]}
-          />
-        
-        })}
-        </div>
-     
+      <div className="flex flex-wrap justify-center gap-4 p-">
+        {champions && Object.entries(champions)
+          .filter(([key, champion]) => 
+            (roleValue === '' || champion.tags.includes(roleValue)) &&
+            (searchValue === '' || champion.name.toLowerCase().includes(searchValue.toLowerCase()))
+          )
+          .map(([key, champion]) => {
+            return <Card key={key} champ={champion} />
+          })
+        }
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default Listcards

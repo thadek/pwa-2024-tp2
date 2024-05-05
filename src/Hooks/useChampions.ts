@@ -53,8 +53,8 @@ const getRandomChampSkin = (skins: any) => {
       skin: `${riotBasicURL}/img/champion/splash/${champion}_${skin}.jpg`,
       centered: `${riotBasicURL}/img/champion/centered/${champion}_${skin}.jpg`,
       loading: `${riotBasicURL}/img/champion/loading/${champion}_${skin}.jpg`,
-      icon: `${riotBasicURL}/img/champion/tiles/${champion}_${skin}.jpg`,
-      default: `${riotBasicURL}/img/champion/${champion}.png`,
+      tile: `${ddragonVersionURL}/img/champion/tiles/${champion}_${skin}.jpg`,
+      icon: `${ddragonVersionURL}/img/champion/${champion}.png`,
       
     }
   }

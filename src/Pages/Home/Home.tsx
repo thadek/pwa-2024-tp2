@@ -1,18 +1,20 @@
 import { useTitle } from "../../Hooks/useTitle";
-import Listcards from "../../Components/Listcards/Listcards";
-import Logo from "../../Components/Logo/Logo";
+import Layout from "../../Layout";
+import Listcards from "../../components/Listcards/Listcards";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 export default function Home() {
 
   useTitle("Home");
 
   return (
-    <div className="flex flex-wrap gap-3 p-3">  
-    <div>
-    
-      <Logo/>
-    </div> 
-     <Listcards/>
+    <Layout>
+      <Navbar />
+      <div className="flex flex-wrap gap-3 p-3">
+        <Listcards/>
       </div>
+      <Footer />
+    </Layout>
   );
 }

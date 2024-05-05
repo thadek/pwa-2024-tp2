@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../const/routes";
 import { Champion } from "../../Types/Champion";
 import { useChampions } from "../../Hooks/useChampions";
-import { Show } from "../../Components/Animations/Show";
+import { Show } from "../../components/Animations/Show";
 import CardImage from "./CardImage";
 
 

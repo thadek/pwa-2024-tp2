@@ -1,6 +1,6 @@
 import { useTitle } from '../../Hooks/useTitle';
-import { Show } from '../../Components/Animations/Show';
-import { Reveal } from '../../Components/Animations/Reveal';
+import { Show } from '../../components/Animations/Show';
+import { Reveal } from '../../components/Animations/Reveal';
 import { useNavigate } from 'react-router-dom';
 
 export default function Landing() {
