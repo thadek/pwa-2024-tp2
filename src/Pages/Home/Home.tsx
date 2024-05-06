@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Layout>
       <Navbar />
-      <div className="flex flex-wrap gap-3 p-3">
+      <div className="flex flex-wrap gap-3 ">
         <Listcards/>
       </div>
       <Footer />

@@ -1,3 +1,5 @@
+import { Spell } from "./Spell";
+
 export type ChampionImages ={
     skin: string;
     splash: string;
@@ -39,7 +41,7 @@ export type Champion = {
     enemytips: string[];
     tags: string[];
     partype: string;
-    spells:[];
+    spells:Spell[];
     error?: string;
     passive:{
         name: string;

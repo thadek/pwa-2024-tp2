@@ -1,8 +1,3 @@
-import { ArrowLeftIcon, ArrowPathIcon, ArrowRightIcon } from "@heroicons/react/24/solid"
-
-
-import style from "./Loading.module.css"
-
 
 export const Loading = ({ text }: { text?: string }) => {
     return (

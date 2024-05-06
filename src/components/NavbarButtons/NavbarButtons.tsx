@@ -1,15 +1,8 @@
 import { useState, useContext } from 'react';
 import { SearchContext } from '../../context/context';
+import { roles } from '../../const/roles';
 
-const roles = [
-    { name: 'Todos', tag: '' },
-    { name: 'Asesino', tag: 'Assassin' },
-    { name: 'Luchador', tag: 'Fighter' },
-    { name: 'Mago', tag: 'Mage' },
-    { name: 'Tirador', tag: 'Marksman' },
-    { name: 'Apoyo', tag: 'Support' },
-    { name: 'Tanque', tag: 'Tank' },
-  ];
+
 
 const NavbarButtons= () => {
     const { setRoleValue } = useContext(SearchContext);
@@ -21,20 +14,14 @@ const NavbarButtons= () => {
     };
 
   return (
-    <div>
+    <div className="hidden lg:block">
       {roles.map((role) => (
         <button 
           key={role.name} 
           onClick={() => handleButtonClick(role.name, role.tag)}
-          style={{
-            margin: '10px',
-            padding: '10px',
-            backgroundColor: selectedRole === role.name ? 'darkviolet' : 'purple',
-            color: 'white',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-          }}
+
+          className={`m-2 p-2 lolfont uppercase text-sm bg-purple-950 text-white rounded-lg hover:bg-purple-900 transition duration-150 ${selectedRole === role.name ? 'bg-violet-800' : ''}`}
+         
         >
           {role.name}
         </button>
