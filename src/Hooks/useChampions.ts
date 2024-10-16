@@ -11,6 +11,7 @@ export const useChampions = () => {
       }
       const data = await res.json()
       
+      //Agregar la propiedad randomSkin al objeto del campeón
       data.data[champion].randomSkin = getRandomChampSkin(data.data[champion].skins)
     
       return data.data[champion]
@@ -20,6 +21,9 @@ export const useChampions = () => {
     }
 
   }
+
+
+ 
 
 
   async function getChampions() {

@@ -51,7 +51,7 @@ export default function Landing() {
 
             <div className="flex relative flex-col items-center justify-center h-screen ">
                 <video autoPlay loop muted id="lolVideo" className="z-0 w-full h-full object-cover">
-                    <source src="https://www.leagueoflegends.com/static/hero-c35bd03ceaa5f919e98b20c905044a3d.webm" type="video/mp4" />
+                    <source src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/8ab3e227121c53aacab0c9b9f7a48adbc65db520.webm" type="video/mp4" />
                 </video>
             </div>
         </Show>

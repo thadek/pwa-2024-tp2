@@ -37,7 +37,7 @@ const Listcards = () => {
   }, [])
 
   const filtered = champions && Object.entries(champions)
-    .filter(([key, champion]) =>
+    .filter(([,champion]) => 
       (roleValue === '' || champion.tags.includes(roleValue)) &&
       (searchValue === '' || champion.name.toLowerCase().includes(searchValue.toLowerCase()))
     );
