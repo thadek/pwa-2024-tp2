@@ -2,7 +2,11 @@ import React from 'react';
 
 export const SearchContext = React.createContext({
   searchValue: '',
-  setSearchValue: (value: string) => {},
+  setSearchValue: (value: any) => {
+    console.log(value);
+  },
   roleValue: '',
-  setRoleValue: (value: string) => {},
+  setRoleValue: (value: any) => {
+    console.log(value);
+  },
 });

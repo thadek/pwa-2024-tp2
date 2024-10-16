@@ -1,6 +1,5 @@
 
 import { Champion } from '../../Types/Champion'
-import { motion } from 'framer-motion';
 import ChampionDetailContainer from './ChampionDetailContainer';
 import { Show } from '../Animations/Show';
 

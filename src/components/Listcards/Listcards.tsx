@@ -55,11 +55,7 @@ const Listcards = () => {
 
         }
 
-        {filtered!.length === 0 && <div className=" flex justify-center items-center text-center w-screen h-screen  ">
-          <h1 className="text-2xl justify text-white">No se encontraron campeones que coincidan con {searchValue} {roleValue? `en la categoría ${roles[roleValue]} `:""}</h1>
-          </div>
-        
-        }
+       
       </div>
     </>
   );
