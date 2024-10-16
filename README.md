@@ -34,6 +34,16 @@ Luego, procesamos estos datos y los utilizamos para renderizar los elementos en 
 
 
 ## 🖥️ Previsualización
+![Captura de pantalla 2024-05-08 180142](https://github.com/thadek/pwa-2024-tp2/assets/86857679/59b01ff8-9297-4b56-af84-e3de73cac88b)
+![Captura de pantalla 2024-05-08 180215](https://github.com/thadek/pwa-2024-tp2/assets/86857679/6ed9751d-0c67-42c5-8c98-5bf272e8d9ef)
+![Captura de pantalla 2024-05-08 180253](https://github.com/thadek/pwa-2024-tp2/assets/86857679/17afefde-32fe-4a3c-89a0-758d750d51b8)
+![Captura de pantalla 2024-05-08 180315](https://github.com/thadek/pwa-2024-tp2/assets/86857679/f9f33e43-0412-4281-b9a9-04708b1657b5)
+![Captura de pantalla 2024-05-08 180346](https://github.com/thadek/pwa-2024-tp2/assets/86857679/d47717a9-0129-41d5-a7e2-b407498ada97)
+![Captura de pantalla 2024-05-08 180420](https://github.com/thadek/pwa-2024-tp2/assets/86857679/c3b0ddb7-31f2-41f2-bfce-ab6fa2b18de0)
+
+
+
+
 
 
 ## Instalación
